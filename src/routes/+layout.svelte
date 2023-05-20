@@ -1,10 +1,82 @@
-<script lang='ts'>
+<script lang="ts">
 	// The ordering of these imports is critical to your app working properly
-	import '@skeletonlabs/skeleton/themes/theme-skeleton.css';
+	import '../theme.postcss';
 	// If you have source.organizeImports set to true in VSCode, then it will auto change this ordering
 	import '@skeletonlabs/skeleton/styles/skeleton.css';
 	// Most of your app wide CSS should be put in this file
 	import '../app.postcss';
+
+	import {
+		AppBar,
+		AppShell,
+		Drawer,
+		drawerStore,
+		type DrawerSettings
+	} from '@skeletonlabs/skeleton';
+	import Navigation from '$lib/components/navigation.svelte';
+
+	// Navigation Drawer Opener
+	const date = new Date();
+	const drawerSettings: DrawerSettings = {
+		width: 'w-[45%] lg:w-[25%]'
+	};
+
+	const openNav = () => {
+		drawerStore.open(drawerSettings);
+	};
 </script>
 
-<slot />
+<Drawer>
+	<Navigation />
+</Drawer>
+
+<AppShell>
+	<svelte:fragment slot="header">
+		<AppBar>
+			<svelte:fragment slot="lead">
+				<button class="block md:hidden" on:click={openNav}>
+					<svg
+						style="color: white"
+						height="32px"
+						id="Layer_1"
+						version="1.1"
+						viewBox="0 0 32 32"
+						width="32px"
+						xml:space="preserve"
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+					>
+						<path
+							d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2 s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2 S29.104,22,28,22z"
+							fill="white"
+						/>
+					</svg>
+				</button>
+			</svelte:fragment>
+			<header class="md:text-left text-center text-xl">Anquar</header>
+			<svelte:fragment slot="trail">
+				<div class="hidden md:block pr-2">
+					<div class="flex gap-8">
+						<button type="button" class="btn variant-ringed-primary hover:variant-ghost-primary">
+							<a href="/">Home</a>
+						</button>
+						<button type="button" class="btn variant-ringed-primary hover:variant-ghost-primary">
+							<a href="/services">Services</a>
+						</button>
+						<button type="button" class="btn variant-ringed-primary hover:variant-ghost-primary">
+							<a href="/about">About</a>
+						</button>
+					</div>
+				</div>
+			</svelte:fragment>
+		</AppBar>
+	</svelte:fragment>
+	<main class="container h-full mx-auto flex justify-center items-center">
+		<slot />
+	</main>
+	<svelte:fragment slot="pageFooter">
+		<div class="bg-surface-800 text-center min-h-[4rem] flex items-center justify-center">
+			Copyright &copy; Anquar {date.getFullYear()}
+		</div>
+	</svelte:fragment>
+</AppShell>
