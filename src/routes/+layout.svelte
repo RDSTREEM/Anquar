@@ -71,7 +71,7 @@
 			</svelte:fragment>
 		</AppBar>
 	</svelte:fragment>
-	<main class="container h-full mx-auto flex justify-center items-center">
+	<main class="container h-full mx-auto flex justify-center items-center mb-8">
 		<slot />
 	</main>
 	<svelte:fragment slot="pageFooter">

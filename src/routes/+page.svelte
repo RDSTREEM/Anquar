@@ -1,5 +1,9 @@
 <!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
 
+<svelte:head>
+	<title>Anquar | Home</title>
+</svelte:head>
+
 <div class="container h-full mx-auto flex justify-center items-center">
 	Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, illo voluptates voluptatum modi
 	blanditiis incidunt eveniet repudiandae amet, saepe, doloremque delectus ut exercitationem aliquid
