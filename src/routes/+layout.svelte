@@ -53,19 +53,22 @@
 					</svg>
 				</button>
 			</svelte:fragment>
-			<header class="md:text-left text-center text-xl">Anquar</header>
+			<header class="md:text-left text-center text-xl text-secondary-400">
+				Anquar Management Solutions
+			</header>
 			<svelte:fragment slot="trail">
 				<div class="hidden md:block pr-2">
 					<div class="flex gap-8">
-						<button type="button" class="btn variant-ringed-primary hover:variant-ghost-primary">
-							<a href="/">Home</a>
-						</button>
-						<button type="button" class="btn variant-ringed-primary hover:variant-ghost-primary">
-							<a href="/services">Services</a>
-						</button>
-						<button type="button" class="btn variant-ringed-primary hover:variant-ghost-primary">
-							<a href="/about">About</a>
-						</button>
+						<a class="btn variant-ringed-primary hover:variant-ghost-primary" href="/">Home</a>
+						<a href="/services" class="btn variant-ringed-primary hover:variant-ghost-primary">
+							Services
+						</a>
+						<a href="/directory" class="btn variant-ringed-primary hover:variant-ghost-primary">
+							Business Directory
+						</a>
+						<a href="/about" class="btn variant-ringed-primary hover:variant-ghost-primary">
+							About
+						</a>
 					</div>
 				</div>
 			</svelte:fragment>
@@ -75,8 +78,14 @@
 		<slot />
 	</main>
 	<svelte:fragment slot="pageFooter">
-		<div class="bg-surface-800 text-center min-h-[4rem] flex items-center justify-center">
-			Copyright &copy; Anquar {date.getFullYear()}
+		<div
+			class="bg-surface-800 text-center min-h-[4rem] flex flex-col gap-2 p-2 items-center justify-center"
+		>
+			<p>Anquar Management Solutions</p>
+			<p>Nurturing Business, Entrepreneurial and Leadership mindset.</p>
+			<p>
+				Copyright &copy; Anquar {date.getFullYear()}
+			</p>
 		</div>
 	</svelte:fragment>
 </AppShell>

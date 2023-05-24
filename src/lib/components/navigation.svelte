@@ -22,6 +22,12 @@
 	</a>
 	<a
 		class="btn variant-ringed-primary hover:variant-ghost-primary flex justify-center items-center p-4"
+		href="/directory"
+	>
+		Business Directory
+	</a>
+	<a
+		class="btn variant-ringed-primary hover:variant-ghost-primary flex justify-center items-center p-4"
 		href="/about"
 	>
 		About
