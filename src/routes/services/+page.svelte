@@ -1,3 +1,7 @@
+<svelte:head>
+	<title>Anquar | Services</title>
+</svelte:head>
+
 <div>
 	<header class="text-2xl text-primary-400">
 		We are Training, Consultancy, and Research solution providers in the areas of Business
@@ -8,7 +12,7 @@
 		management leadership and strategy.
 	</header>
 	<header class="text-center mt-8 mb-4 text-xl">Training</header>
-	<div class="grid grid-cols-3 grid-rows-3">
+	<div class="grid lg:grid-cols-3 lg:grid-rows-3">
 		<div class="card hover:card-hover rounded-r-none rounded-bl-none p-8 grid place-items-center">
 			Entrepreneurship and Innovation (Startup corporate and public)
 		</div>
@@ -55,6 +59,8 @@
 			<li>Organizational Structure Design</li>
 			<li>Training Need Assessment (TNA)</li>
 			<li>Corporate Hiring and Starting</li>
+			<li>Corporate Governance</li>
+			<li>Foundations of project management</li>
 		</ul>
 	</div>
 </div>

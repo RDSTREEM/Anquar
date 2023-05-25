@@ -18,7 +18,7 @@
 	// Navigation Drawer Opener
 	const date = new Date();
 	const drawerSettings: DrawerSettings = {
-		width: 'w-[45%] lg:w-[25%]'
+		width: 'w-[65%] lg:w-[25%]'
 	};
 
 	const openNav = () => {
