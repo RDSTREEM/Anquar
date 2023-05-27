@@ -8,8 +8,8 @@
 
 <div class="container h-full mx-auto flex flex-col justify-center items-center">
 	<header class="text-2xl text-center">
-		Anquar Management Solutions is a training, consultancy and research provider in areas of
-		business management, leadership and strategy.
+		Anquar Management Solutions is a Training, Consultancy and Research provider in areas of
+		Business, Management, Leadership and Strategy.
 	</header>
 	<section>
 		<Contact />
